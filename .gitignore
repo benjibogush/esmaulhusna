@@ -1,0 +1,80 @@
+# -------------------
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -------------------
+# Virtual environments
+venv/
+.env/
+.venv/
+pip-wheel-metadata/
+.eggs/
+*.egg-info/
+*.egg
+
+# -------------------
+# PyInstaller / Bundler
+dist/
+build/
+*.spec
+*.exe
+*.dmg
+*.app
+*.pkg
+*.msi
+*.zip
+*.tar.gz
+*-macos.spec
+*-windows.spec
+
+# PyInstaller temp bundle folders
+*_MEI*/
+*.manifest
+*.dll
+*.pyd
+__pyinstaller/
+
+# -------------------
+# Logs and debug
+*.log
+*.bak
+backups/
+
+# -------------------
+# Data exports
+reference_export.json
+
+# -------------------
+# Generated PDFs
+*.pdf
+
+# -------------------
+# OS / Editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# -------------------
+# Misc
+*.swp
+*.swo
+
+*.icns     # macOS icon bundles
+*.ico      # Windows icon bundles
+*.pkg      # sometimes generated alongside dmg
+
+build/
+dist/
+
+
+bundle.log
+build.log
+
+# Security handling
+*.pem
+*.key
+signing-cert.*
+
