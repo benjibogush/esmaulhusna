@@ -1,80 +1,94 @@
-# -------------------
-# Python cache
+# ==============================
+# CLI and Project-Specific Rules
+# ==============================
+
+# Executables, binaries, and build artifacts.
+# This ensures that platform-specific binaries are never committed.
+esmaulhusna
+esmaulhusna.exe
+esmaulhusna_macos_arm64
+esmaulhusna_windows_amd64
+
+# Directory for packaged executables and build logs.
+dist/
+build/
+bundle.log
+build.log
+
+# ==============================
+# Security and Credentials
+# ==============================
+
+# Protects sensitive environment variables and tokens.
+# The standard practice is to use a .env file and ignore it.
+.env
+*.env
+*.token
+*.git-credentials
+
+# Cryptographic and signing keys.
+# These must NEVER be committed to a public or private repository.
+*.pem
+*.key
+*.p12
+*.pub
+id_rsa
+id_ed25519
+ed25519
+signing-cert.*
+
+# ==============================
+# Language-specific Files
+# ==============================
+
+# Python-specific build and cache files.
+# This includes bytecode, build artifacts, and PyInstaller-related files.
 __pycache__/
 *.py[cod]
-*$py.class
-
-# -------------------
-# Virtual environments
-venv/
-.env/
-.venv/
+*.spec
+*.manifest
+*.dll
+*.pyd
+__pyinstaller/
 pip-wheel-metadata/
 .eggs/
 *.egg-info/
 *.egg
 
-# -------------------
-# PyInstaller / Bundler
-dist/
-build/
-*.spec
-*.exe
-*.dmg
-*.app
-*.pkg
-*.msi
-*.zip
-*.tar.gz
-*-macos.spec
-*-windows.spec
+# Go-specific build and cache files.
+# The `go.mod` and `go.sum` should always be committed.
+*.o
+*.a
+*.so
+vendor/
 
-# PyInstaller temp bundle folders
-*_MEI*/
-*.manifest
-*.dll
-*.pyd
-__pyinstaller/
+# Virtual environments.
+# These are generated locally and should not be part of the repository.
+venv/
+.env/
+.venv/
 
-# -------------------
-# Logs and debug
+# ==============================
+# Logs, Data, and Metadata
+# ==============================
+
+# Logs and debug files.
 *.log
 *.bak
 backups/
 
-# -------------------
-# Data exports
-reference_export.json
-
-# -------------------
-# Generated PDFs
+# User-specific data exports.
+# These are generated at runtime and contain user data.
+*.json
 *.pdf
 
-# -------------------
-# OS / Editor metadata
+# OS and IDE metadata.
 .DS_Store
 Thumbs.db
+*.ico
+*.icns
 .vscode/
 .idea/
-
-# -------------------
-# Misc
 *.swp
 *.swo
-
-*.icns     # macOS icon bundles
-*.ico      # Windows icon bundles
-*.pkg      # sometimes generated alongside dmg
-
-build/
-dist/
-
-
-bundle.log
-build.log
-
-# Security handling
-*.pem
-*.key
-signing-cert.*
-
+*~
