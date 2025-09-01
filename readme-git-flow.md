@@ -2,20 +2,12 @@ Git Workflow Commands
 This guide provides a complete, step-by-step Git workflow from initializing a new repository to pushing your changes to a remote server. The commands assume you have already cd'd into your project directory named esmaulhusna.
 
 
-### create a new repository on the command line
-echo "# esmaulhusna" >> README.md
-git init
-git add readme.md
-git commit -m "first commit"
-git branch -M master
-git remote add origin git@github.com:benjibogush/esmaulhusna.git
-git push -u origin master
+## MacOS: Add steps to authenticate github using PAT classic
 
-### …or push an existing repository from the command line
-git remote add origin git@github.com:benjibogush/esmaulhusna.git
-git branch -M master
-git push -u origin master
 
+## Windows: Add steps to authenticate github using PAT classic
+
+## For both: Add steps to authenticate github using PAT fine tuned access
 
 ## Step 1: Set Your User Information
 This is a one-time setup on your machine to identify your commits. Use the email associated with your Git account.
