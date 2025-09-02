@@ -119,7 +119,7 @@ pdfmetrics.registerFont(TTFont('DejaVu', font_path))
 def bundle_app(arch, force=False):
     system = platform.system().lower()
     if arch == "windows" and system != "windows":
-      logging.error("🚫 Cannot build Windows .exe from macOS. Please run this on a Windows machine or use a VM/Docker.")
+        logging.error("🚫 Cannot build Windows .exe from macOS. Please run this on a Windows machine or use a VM/Docker.")
         return
     if arch == "macos-arm64" and system != "Darwin":
         logging.error("🚫 macOS ARM build must be run on macOS ARM.")
@@ -196,6 +196,11 @@ def main():
     parser.add_argument("--import-json", metavar="FILE", help="Import reference data from JSON file")
 
     args = parser.parse_args()
+
+    # Print help if nothing was provided
+    if not vars(args):
+        parser.print_help()
+        return
 
     if args.backup:
         backup_reference(force=args.force)
