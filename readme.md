@@ -7,8 +7,8 @@ Generate dynamicly arranged PDFs of the 99 Names of dear Allah ﷻ almighty with
 ## 🚀 Quick Start  
 
 # Clone the repository
-git clone <repo>
-cd <repo>
+* git clone repoUrl
+* cd <repo>
 
 # Create and activate a virtual environment
 python3 -m venv venv
