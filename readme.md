@@ -6,24 +6,28 @@ Generate dynamicly arranged PDFs of the 99 Names of dear Allah ﷻ almighty with
 
 ## 🚀 Quick Start  
 
-# Clone the repository
+### Clone the repository
 * git clone repoUrl
-* cd <repo>
+* cd into repo dir
 
-# Create and activate a virtual environment
-python3 -m venv venv
+### Create and activate a virtual environment
+* python3 -m venv venv
 
-# macOS / Linux
-source venv/bin/activate  
+### macOS / Linux
+* source venv/bin/activate  
 
-# Windows (PowerShell / CMD)
-venv\Scripts\activate
+### Windows (PowerShell / CMD)
+* venv\Scripts\activate
 
-# Install dependencies
-pip install -r requirements.txt
+### Install dependencies
+* pip install -r requirements.txt
 
-# Run the app
-python3 cli.py
+### Run the app
+* python3 cli.py --bundle --arch macos-arm64
+* python3 cli.py --bundle --arch windows
+
+* Cd into Dist to find the executable
+* Then you can use executable to generate PDF basic or detailed
 
 ---
 
@@ -38,15 +42,15 @@ python3 cli.py
 
 ---
 
-## 📌 Best Practice  
+### 📌 Best Practice  
 
 After every code change, update your dependency lock:  
 
-pip freeze > requirements.txt
+* pip freeze > requirements.txt
 
 ---
 
-## ⚠️ Limitation  
+### ⚠️ Limitation  
 
 Currently, executables can only be built **on the same OS as the target**:  
 - Windows → `.exe`  
@@ -55,7 +59,7 @@ Currently, executables can only be built **on the same OS as the target**:
 
 ---
 
-## 🔀 Cross-Platform Options : Pending, see issues
+### 🔀 Cross-Platform Options : Pending, see issues
 
 If you want to try cross-building:  
 
@@ -67,25 +71,26 @@ If you want to try cross-building:
 
 ## 🧾 Legacy Instructions (macOS example)  
 
-# Install manually
-pip install reportlab arabic-reshaper python-bidi
+### Install manually
+* pip install reportlab arabic-reshaper python-bidi
 
-# or
-python3 -m pip install reportlab arabic-reshaper python-bidi
+### or use this
+* python3 -m pip install reportlab arabic-reshaper python-bidi
 
-# or inside venv
-python3 -m venv venv
-source venv/bin/activate
-pip install reportlab arabic-reshaper python-bidi
+### or inside venv
+* python3 -m venv venv
+* source venv/bin/activate
+* pip install reportlab arabic-reshaper python-bidi
 
-# Run the app
-python3 ./app.py3
+### Run the app
+* python3 ./app.py
+* app_basic and app_detailed can be run independently to generate pdf without executable as long as all dependencies are installed.
 
 The generated file will be saved as:  
 Esma_ul_Husna_99_Names_Of_Allah.pdf
 
 # Exit virtual environment
-deactivate
+* deactivate
 
 ---
 
